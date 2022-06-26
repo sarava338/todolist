@@ -1,0 +1,56 @@
+*{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #121212;
+}
+
+.data{
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: center;
+    align-items: flex-start;
+}
+
+.data>*{
+    margin: auto;
+}
+
+.todo{
+    background-color: blue;
+}
+
+.marked{
+    background-color: green;
+}
+
+.mark-as-read-btn, .delete-btn {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; 
+}
+
+.show {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  position: absolute;
+  z-index: 1;
+}
+
+.mark-as-read-btn:hover .show, .delete-btn:hover .show {
+  visibility: visible;
+}
+
+@media (max-width:'450px'){
+    .data{
+        flex-flow: column nowrap;
+    }
+}
